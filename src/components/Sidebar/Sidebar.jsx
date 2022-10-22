@@ -32,6 +32,8 @@ const Sidebar = (props) => {
         window.scrollTo(0, 0);
     }
 
+    
+
     return (
         <Fragment>
 
