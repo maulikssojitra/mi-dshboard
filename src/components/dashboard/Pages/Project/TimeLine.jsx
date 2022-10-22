@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Layout from '../../../Sidebar/Layout'
 
-import { timelineData } from '../../../Data/TimelineData'
+import timelineData from '../../../Data/TimelineData.json'
 
 const TimeLine = () => {
 

@@ -4,15 +4,16 @@ import {
     Routes
 } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
-import Analytics from './componets/dashboard/main/Analytics';
-import Sales from './componets/dashboard/main/Sales';
-import ProfileMain from './componets/dashboard/Profile/ProfileMain';
-import TimeLine from './componets/dashboard/Pages/Project/TimeLine';
-import User from './componets/dashboard/Pages/Users/User';
+import Analytics from './components/dashboard/main/Analytics';
+import Sales from './components/dashboard/main/Sales';
+import ProfileMain from './components/dashboard/Profile/ProfileMain';
+import TimeLine from './components/dashboard/Pages/Project/TimeLine';
+import User from './components/dashboard/Pages/Users/User';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './componets/assets/css/Main.css'
+import './components/assets/css/Main.css'
 import 'react-toastify/dist/ReactToastify.css';
+import Setting from './components/dashboard/Pages/setting/Setting';
 
 const App = () => {
 
@@ -35,8 +36,9 @@ const App = () => {
                 <Route path="/" element={<Analytics />} />
                 <Route path="/sales" element={<Sales />} />
                 <Route path="/profile" element={<ProfileMain />} />
-                <Route path="/newuser" element={<User />} />
+                <Route path="/new-user" element={<User />} />
                 <Route path="/timeline" element={<TimeLine />} />
+                <Route path="/setting" element={<Setting />} />
             </Routes>
         </Fragment>
     )

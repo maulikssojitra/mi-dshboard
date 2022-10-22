@@ -15,7 +15,7 @@ const Header = (props) => {
     const ref = useRef()
 
     const [notify, setNotify] = useState(false);
-    const [activeFild, setActiveFild] = useState();
+    const [activeField, setActiveField] = useState();
 
     useEffect(() => {
         const notifyClickedOutside = e => {
@@ -33,12 +33,6 @@ const Header = (props) => {
 
     const refreshPage = () => {
         window.scrollTo(0, 0);
-    }
-
-    const bodyOff = () => {
-        console.log('1234567789');
-        const body = document.querySelector('body');
-        body.style.overflow = notify ? 'hidden' : 'auto';
     }
 
     return (
@@ -65,15 +59,12 @@ const Header = (props) => {
                         </div>
                     </div>
                     <div className="right-buttons" ref={ref}>
-                        {/* <input type="type" placeholder="Search here" /> */}
                         <div className="input_wrap">
                             <input className="header-search" type="text" required />
                             <label>Search here</label>
                         </div>
                         <Button className="sidebar-toggle" onClick={() => {
                             props.setIsToggle(!props.isToggle)
-                            const body = document.querySelector('body');
-                            body.style.overflow = !props.isToggle ? 'hidden' : 'auto'
                         }}
                         >
                             {
@@ -82,8 +73,7 @@ const Header = (props) => {
                         </Button>
                         <Button className="user"><FaUserCircle /></Button>
                         <Button className="notification" onClick={() => {
-                            setNotify(true);
-                            bodyOff();
+                            setNotify(!notify);
                         }}
                         >
                             <MdNotificationsActive />
@@ -91,9 +81,9 @@ const Header = (props) => {
                         {
                             notify &&
                             <div className="notification-modal" >
-                                <Button className={`${activeFild === 1 ? "active" : ""}`} onClick={() => setActiveFild(1)}><MdEmail />Check new messages</Button>
-                                <Button className={`${activeFild === 2 ? "active" : ""} mt-1`} onClick={() => setActiveFild(2)} ><IoMdWifi />Manage Podcast sessions</Button>
-                                <Button className={`${activeFild === 3 ? "active" : ""} mt-1`} onClick={() => setActiveFild(3)}><HiShoppingCart />Payment successfully completed</Button>
+                                <Button className={`${activeField === 'messages' ? "active" : ""}`} onClick={() => setActiveField('messages')}><MdEmail />Check new messages</Button>
+                                <Button className={`${activeField === 'sessions' ? "active" : ""} mt-1`} onClick={() => setActiveField('sessions')} ><IoMdWifi />Manage Podcast sessions</Button>
+                                <Button className={`${activeField === 'completed' ? "active" : ""} mt-1`} onClick={() => setActiveField('completed')}><HiShoppingCart />Payment successfully completed</Button>
                             </div>
                         }
                     </div>

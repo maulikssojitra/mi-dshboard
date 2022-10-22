@@ -140,7 +140,7 @@ const Sidebar = (props) => {
                                 </Button>
                                 <Collapse in={pageUsers}>
                                     <div id="collapse-pages">
-                                        <Link to="/newuser" className="sidebar-btn mt-1" onClick={refreshPage}>
+                                        <Link to="/new-user" className="sidebar-btn mt-1" onClick={refreshPage}>
                                             <div className="d-flex align-items-center">
                                                 <span className="text-logo">N</span>
                                                 <span className="mar-left-10">New User</span>
