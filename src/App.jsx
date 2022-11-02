@@ -33,7 +33,6 @@ const App = () => {
                 promise={2000}
             />
             <Routes>
-                
                 <Route path="/" element={<Analytics />} />
                 <Route path="/sales" element={<Sales />} />
                 <Route path="/profile" element={<ProfileMain />} />
