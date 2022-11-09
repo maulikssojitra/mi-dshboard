@@ -39,7 +39,7 @@ const Sidebar = (props) => {
 
             <div className={`${!props.isToggle ? "sidebar" : "mar-left-0"} sidebar`}>
                 <div className="b-bottom">
-                    <Link to="/" className="logo" onClick={refreshPage}>
+                    <Link to="/analytics" className="logo" onClick={refreshPage}>
                         <img src={require('../assets/img/logo.png').default} alt="" width={35} />
                         <span>Material Dashboard</span>
                     </Link>
@@ -85,7 +85,7 @@ const Sidebar = (props) => {
                     </Button>
                     <Collapse in={dashboard}>
                         <div id="collapse-dashboard">
-                            <Link to="/" className="sidebar-btn mt-1" onClick={refreshPage}>
+                            <Link to="/analytics" className="sidebar-btn mt-1" onClick={refreshPage}>
                                 <div className="d-flex align-items-center">
                                     <span className="text-logo">A</span>
                                     <span className="mar-left-10">Analytics</span>

@@ -44,12 +44,12 @@ const Header = (props) => {
                         <div className="page-path">
                             <Breadcrumb >
                                 <Breadcrumb.Item>
-                                    <Link to="/" onClick={refreshPage}>
+                                    <Link to="/analytics" onClick={refreshPage}>
                                         Home
                                     </Link>
                                 </Breadcrumb.Item>
                                 <Breadcrumb.Item>
-                                    <Link to="/" onClick={refreshPage}>
+                                    <Link to="/analytics" onClick={refreshPage}>
                                         Dashboard
                                     </Link>
                                 </Breadcrumb.Item>

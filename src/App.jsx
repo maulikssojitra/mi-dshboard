@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import {
+    Outlet,
     Route,
     Routes
 } from "react-router-dom";
@@ -14,8 +15,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/assets/css/Main.css'
 import 'react-toastify/dist/ReactToastify.css';
 import Setting from './components/dashboard/Pages/setting/Setting';
+import Sidebar from './components/Sidebar/Sidebar';
+import Login from './components/dashboard/Pages/auth/Login';
+
 
 const App = () => {
+
+    const RouteWithSidebar = () => {
+        return (
+            <>
+                <Sidebar />
+                <Outlet />
+            </>
+        )
+    }
 
     return (
         <Fragment>
@@ -33,12 +46,15 @@ const App = () => {
                 promise={2000}
             />
             <Routes>
-                <Route path="/" element={<Analytics />} />
-                <Route path="/sales" element={<Sales />} />
-                <Route path="/profile" element={<ProfileMain />} />
-                <Route path="/new-user" element={<User />} />
-                <Route path="/timeline" element={<TimeLine />} />
-                <Route path="/setting" element={<Setting />} />
+                <Route path='/' element={<Login />} />
+                <Route element={<RouteWithSidebar />}>
+                    <Route path="/analytics" element={<Analytics />} />
+                    <Route path="/sales" element={<Sales />} />
+                    <Route path="/profile" element={<ProfileMain />} />
+                    <Route path="/new-user" element={<User />} />
+                    <Route path="/timeline" element={<TimeLine />} />
+                    <Route path="/setting" element={<Setting />} />
+                </Route>
             </Routes>
         </Fragment>
     )
