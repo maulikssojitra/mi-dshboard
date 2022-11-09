@@ -10,11 +10,6 @@ const Layout = (props) => {
     return (
         <Fragment>
 
-            {
-                
-                props.sidebar === false ? "" : <Sidebar isToggle={isToggle} />
-            }
-
             <main className='dashboard-content'>
                 {
                     props.header === false ? "" : <Header setIsToggle={setIsToggle} isToggle={isToggle} breadcrumb={props.breadcrumb} />
