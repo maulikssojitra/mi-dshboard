@@ -28,9 +28,9 @@ const Sidebar = (props) => {
     const [resetPass, setResetPass] = useState();
     const [application, setApplication] = useState();
 
-    // const refreshPage = () => {
-    //     window.scrollTo(0, 0);
-    // }
+    const refreshPage = () => {
+        window.scrollTo(0, 0);
+    }
 
 
     return (
