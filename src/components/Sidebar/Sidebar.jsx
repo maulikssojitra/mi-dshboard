@@ -31,6 +31,7 @@ const Sidebar = (props) => {
     const refreshPage = () => {
         window.scrollTo(0, 0);
     }
+    
 
     return (
         <Fragment>
