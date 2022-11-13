@@ -16,7 +16,7 @@ import './components/assets/css/Main.css'
 import 'react-toastify/dist/ReactToastify.css';
 import Setting from './components/dashboard/Pages/setting/Setting';
 import Sidebar from './components/Sidebar/Sidebar';
-import Login from './components/dashboard/auth/Login';
+import Login from './components/auth/Login';
 
 
 const App = () => {
