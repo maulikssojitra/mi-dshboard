@@ -60,6 +60,110 @@
     justify-content: center;
 }
 
+.input_field{
+    position: relative;
+}
+
+.input_field .input-search {
+    padding: 12px 12px 12px 0;
+    border: 1px solid rgba(210, 214, 218, 0.6);
+    background: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+    color: #fff;
+    font-weight: 300;
+}
+
+.input_field .input-search:focus {
+    border: 1px solid rgb(26, 115, 232);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+.input_field label {
+    font-size: 14px;
+    color: rgba(210, 214, 218, 0.6);
+    padding: 14px 14px 14px 0;
+    font-weight: 400;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+
+.input_field .input-search:focus+label {
+    font-size: 12px;
+    color: rgb(26, 115, 232);
+    top: -10px;
+    left: 0px;
+    background-color: rgb(32, 41, 64);
+    padding: 0px 5px 0px 0px;
+    backdrop-filter: blur(4px);
+    display: block;
+}
+
+.input_field .input-search:valid+label {
+    font-size: 12px;
+    color: rgb(26, 115, 232);
+    top: -10px;
+    left: 0px;
+    background-color: rgb(32, 41, 64);
+    padding: 0px 5px 0px 0px;
+    backdrop-filter: blur(4px);
+    display: block;
+}
+
+.input-toggle {
+    line-height: 0;
+    font-size: 0;
+    display: inline-block;
+    margin: 0;
+}
+
+.input-toggle input {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch {
+    display: inline-block;
+    position: relative;
+    height: 1.1rem;
+    width: 2.5rem;
+    border-radius: 50px;
+    background-color: #323A54;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.switch:before {
+    content: "";
+    display: block;
+    height: 1.40rem;
+    width: 1.40rem;
+    border-radius: 100%;
+    background-color: #FAFAFA;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: -15%;
+    right: 0;
+    transition: all 200ms ease-in-out;
+}
+
+.input-toggle input:checked+.switch {
+    background-color: #CCD2D7;
+    transition: all 200ms ease-in-out;
+}
+
 body {
     background-color: rgb(26, 32, 53);
     font-family: 'Public Sans' !important;
@@ -624,51 +728,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
-.profile-main .input-toggle {
-    line-height: 0;
-    font-size: 0;
-    display: inline-block;
-    margin: 0;
-}
-
-.profile-main .input-toggle input {
-    display: block;
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.profile-main .switch {
-    display: inline-block;
-    position: relative;
-    height: 1.1rem;
-    width: 2.5rem;
-    border-radius: 50px;
-    background-color: #323A54;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-}
-
-.profile-main .switch:before {
-    content: "";
-    display: block;
-    height: 1.40rem;
-    width: 1.40rem;
-    border-radius: 100%;
-    background-color: #FAFAFA;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: -15%;
-    right: 0;
-    transition: all 200ms ease-in-out;
-}
-
-.profile-main .input-toggle input:checked+.switch {
-    background-color: #CCD2D7;
-    transition: all 200ms ease-in-out;
-}
-
 .input-toggle input:checked+.switch:before {
     right: 1.25rem;
     transition: all 200ms ease-in-out;
@@ -1121,4 +1180,92 @@ h1, h2, h3, h4, h5, h6 {
 
 .timeline .time-box:nth-child(9)::before{
     background-color: rgb(123, 128, 154);
+}
+
+/* ============================= login ============================ */
+.login-main{
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
+
+.login-main .banner-img{
+    width: 100%;
+    height: 300px;
+    background-image: url('../img/banner-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.login-main .login-box{
+    background-color: rgb(32, 41, 64);
+    box-shadow: rgb(0 0 0 / 14%) 0rem 0.125rem 0.125rem 0rem, rgb(0 0 0 / 20%) 0rem 0.1875rem 0.0625rem -0.125rem, rgb(0 0 0 / 12%) 0rem 0.0625rem 0.3125rem 0rem;
+    border-radius: 15px;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: -120px;
+}
+
+.login-main .login-box-title{
+    margin: 0px 20px;
+    position: relative;
+    top: -30px;
+    background: linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232));
+    color: rgb(52, 71, 103);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: rgb(0 0 0 / 14%) 0rem 0.25rem 1.25rem 0rem, rgb(76 175 79 / 40%) 0rem 0.4375rem 0.625rem -0.3125rem;
+}
+
+.login-main .login-box-title h3{
+    color: #fff;
+    font-weight: 900;
+    font-size: 25px;
+    margin-top: 7px;
+}
+
+.login-main .login-box-title p{
+    color: #fff;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.login-main .login-form{
+    padding: 20px;
+}
+
+.login-main .remember p{
+    color: #fff;
+    font-size: 14px;
+}
+
+.login-main .login-btn{
+    background-image: linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232));
+    transition: 0.5s;
+    border: none;
+    box-shadow: none !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 10px 0;
+    font-weight: 900;
+    border-radius: 10px;
+}
+
+.login-main .login-btn:hover{
+    box-shadow: rgb(26 115 232 / 40%) 0rem 0.875rem 1.625rem -0.75rem, rgb(26 115 232 / 15%) 0rem 0.25rem 1.4375rem 0rem, rgb(26 115 232 / 20%) 0rem 0.5rem 0.625rem -0.3125rem !important;
+}
+
+.login-main .last-def{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.login-main .last-def a{
+    text-decoration: none;
+    color: rgb(26, 115, 232) !important;
 }
