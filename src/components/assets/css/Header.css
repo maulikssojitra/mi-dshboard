@@ -205,3 +205,18 @@
         display: block !important;
     }
 }
+
+@media (max-width: 768px) {
+    .header .input_wrap{
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .page-path .breadcrumb{
+        display: none;
+    }
+    .page-path h5{
+        margin-top: 0 !important;
+    }
+}

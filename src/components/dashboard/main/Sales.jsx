@@ -27,8 +27,6 @@ const Sales = (props) => {
                                     <h6 className="mb-0">Sales</h6>
                                     <Button onClick={() => {
                                         setSubDateModal(!subDateModal);
-                                        const body = document.querySelector('body');
-                                        body.style.overflow = !subDateModal ? 'hidden' : 'auto'
                                     }}>6 May - 7 May</Button>
                                     <div className={`${!subDateModal ? "d-none" : ""} date-box`}>
                                         <Button>Last 7 days</Button>
@@ -46,8 +44,6 @@ const Sales = (props) => {
                                     <h6 className="mb-0">Customers</h6>
                                     <Button onClick={() => {
                                         setCostomer(!costomer);
-                                        const body = document.querySelector('body');
-                                        body.style.overflow = !costomer ? 'hidden' : 'auto'
                                     }}>6 May - 7 May</Button>
                                     <div className={`${!costomer ? "d-none" : ""} date-box`}>
                                         <Button>Last 7 days</Button>
@@ -65,8 +61,6 @@ const Sales = (props) => {
                                     <h6 className="mb-0">Avg. Revenue</h6>
                                     <Button onClick={() => {
                                         setRevenu(!revenu);
-                                        const body = document.querySelector('body');
-                                        body.style.overflow = !revenu ? 'hidden' : 'auto'
                                     }}>6 May - 7 May</Button>
                                     <div className={`${!revenu ? "d-none" : ""} date-box`}>
                                         <Button>Last 7 days</Button>

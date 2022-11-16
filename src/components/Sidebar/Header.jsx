@@ -42,7 +42,7 @@ const Header = (props) => {
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="d-flex align-items-center gap">
                         <div className="page-path">
-                            <Breadcrumb >
+                            <Breadcrumb>
                                 <Breadcrumb.Item>
                                     <Link to="/analytics" onClick={refreshPage}>
                                         Home
