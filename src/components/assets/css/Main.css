@@ -330,6 +330,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
     font-weight: 100;
     font-size: 16px;
+    margin-top: 5px;
 }
 
 .chart-main .chart {
@@ -388,11 +389,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hotel-per {
+    padding-bottom: 7px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.295);
 }
 
 .hotel-per span {
     color: rgba(255, 255, 255, 0.514);
+}
+
+
+.hotel-per h3{
+    margin-top: 6px;
+    font-size: 24px;
 }
 
 .hotel-main .hotel-box p {
@@ -428,10 +436,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: rgb(0 0 0 / 14%) 0rem 0.125rem 0.125rem 0rem, rgb(0 0 0 / 20%) 0rem 0.1875rem 0.0625rem -0.125rem, rgb(0 0 0 / 12%) 0rem 0.0625rem 0.3125rem 0rem;
     border-radius: 15px;
     padding: 15px;
-}
-
-.hotel-location .location-box:hover .location1 {
-    transform: translate(0%, -15%);
 }
 
 .hotel-location .location-box .edit-refresh {
@@ -479,8 +483,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .hotel-location .location-def p {
     color: rgba(255, 255, 255, 0.644);
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 100;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .hotel-location .location span {
@@ -515,7 +525,34 @@ h1, h2, h3, h4, h5, h6 {
         display: none !important;
     }
 
-    .chart-box, .hotel-box, .location-box {
+    .chart-box{
+        margin-top: 20px;
+    }
+
+    .hotel-box {
+        margin-top: 50px;
+    }
+
+    .location-box{
+        margin-top: 20px;
+    }
+    .margin-md{
+        margin-top: 70px;
+    }
+
+    .margin-chart-md{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hotel-main{
+        margin-top: 30px;
+    }
+    .margin-sm{
+        margin-top: 70px;
+    }
+    .margin-chart-sm{
         margin-top: 50px;
     }
 }
@@ -551,6 +588,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 15px;
     color: rgba(255, 255, 255, 0.377);
     font-weight: 100;
+}
+
+.seles-main .seles-box h4{
+    margin-bottom: 7px;
 }
 
 .seles-main .seles-box .date-box {

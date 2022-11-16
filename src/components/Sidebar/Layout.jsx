@@ -15,10 +15,6 @@ const Layout = (props) => {
                 }
 
                 {props.children}
-
-                {
-                    props.footer === false ? "" : <Footer />
-                }
             </main>
 
         </Fragment>

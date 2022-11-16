@@ -175,7 +175,7 @@ const Analytics = (props) => {
                         </div>
                     </Col>
                     <Col lg={4} md={6} sm={12}>
-                        <div className="chart-box">
+                        <div className="chart-box margin-chart-sm">
                             <div className="chart bg-green">
                                 <Linechart />
                             </div>
@@ -187,7 +187,7 @@ const Analytics = (props) => {
                         </div>
                     </Col>
                     <Col lg={4} md={6} sm={12}>
-                        <div className="chart-box">
+                        <div className="chart-box margin-chart-md">
                             <div className="chart bg-black">
                                 <LinechartS />
                             </div>
@@ -265,7 +265,7 @@ const Analytics = (props) => {
             <div className="hotel-location">
                 <Row className="justify-content-center">
                     <Col lg={4} md={6} sm={12}>
-                        <div className="location-box">
+                        <div className="location-box mt-xs-0">
                             <img className="location1" src={require('../../assets/img/location1.jpg').default} alt="location" />
                             <div className="edit-refresh">
                                 <Button className="refresh-btn text-pink"><MdRefresh/></Button>
@@ -282,7 +282,7 @@ const Analytics = (props) => {
                         </div>
                     </Col>
                     <Col lg={4} md={6} sm={12}>
-                        <div className="location-box">
+                        <div className="location-box margin-sm">
                             <img className="location1" src={require('../../assets/img/location2.jpg').default} alt="location" />
                             <div className="edit-refresh">
                                 <Button className="refresh-btn text-pink"><MdRefresh/></Button>
@@ -299,7 +299,7 @@ const Analytics = (props) => {
                         </div>
                     </Col>
                     <Col lg={4} md={6} sm={12}>
-                        <div className="location-box">
+                        <div className="location-box margin-md">
                             <img className="location1" src={require('../../assets/img/location3.jpg').default} alt="location" />
                             <div className="edit-refresh">
                                 <Button className="refresh-btn text-pink"><MdRefresh/></Button>
