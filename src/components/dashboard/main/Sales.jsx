@@ -7,12 +7,14 @@ import Round from '../../charts/Round'
 import Layout from '../../Sidebar/Layout'
 import LinechartSeles from '../../charts/LinechartSeles'
 import HorizontalChart from './../../charts/HorizontalChart';
+import country_data from '../../Data/country_data.json'
 
 const Sales = (props) => {
 
     const [subDateModal, setSubDateModal] = useState();
     const [costomer, setCostomer] = useState();
     const [revenu, setRevenu] = useState();
+    const [countryData, setCountryData] = useState(country_data)
 
     return (
         <Layout header={true} footer={true} breadcrumb="Sales">
@@ -120,7 +122,9 @@ const Sales = (props) => {
                                         <RiErrorWarningLine />
                                     </Button>
                                 </div>
-                                <HorizontalChart />
+                                <div className='mt-4'>
+                                    <HorizontalChart />
+                                </div>
                             </div>
                         </Col>
                         <Col lg={4} md={4} sm={12}>
@@ -134,101 +138,37 @@ const Sales = (props) => {
                                 <div>
                                     <div className="salse-table mt-3">
                                         <Table responsive>
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        <img src={require('../../assets/img/usa.png').default} alt="" width={25} />
-                                                    </th>
-                                                    <th>
-                                                        <div className="country-name">
-                                                            <span>Country:</span>
-                                                            <span>United State</span>
-                                                        </div>
-                                                    </th>
-                                                    <th>
-                                                        <div className="country-name">
-                                                            <span>Sales:</span>
-                                                            <span>2500</span>
-                                                        </div>
-                                                    </th>
-                                                    <th>
-                                                        <div className="country-name">
-                                                            <span>Bounce:</span>
-                                                            <span>29.9%</span>
-                                                        </div>
-                                                    </th>
-                                                </tr>
-                                            </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <img src={require('../../assets/img/germany.png').default} alt="" width={25} />
-                                                    </td>
-                                                    <td>
-                                                        <div className="country-name">
-                                                            <span>Country:</span>
-                                                            <span>Germany</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div className="country-name">
-                                                            <span>Country:</span>
-                                                            <span>3.900</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div className="country-name">
-                                                            <span>Country:</span>
-                                                            <span>40.22%</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src={require('../../assets/img/great-bitain.png').default} alt="" width={25} />
-                                                    </td>
-                                                    <td>
-                                                        <div className="country-name">
-                                                            <span>Country:</span>
-                                                            <span>Great Britain</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div className="country-name">
-                                                            <span>Country:</span>
-                                                            <span>1.400</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div className="country-name">
-                                                            <span>Country:</span>
-                                                            <span>23.44%</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src={require('../../assets/img/Brasil.png').default} alt="" width={25} />
-                                                    </td>
-                                                    <td>
-                                                        <div className="country-name">
-                                                            <span>Country:</span>
-                                                            <span>Brasil</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div className="country-name">
-                                                            <span>Country:</span>
-                                                            <span>562</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div className="country-name">
-                                                            <span>Country:</span>
-                                                            <span>32.14%</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                {
+                                                    country_data.slice(0, 4).map((e, i) => {
+                                                        return (
+                                                            <tr key={i}>
+                                                                <td>
+                                                                    <img src={e.img} alt="" width={25} />
+                                                                </td>
+                                                                <td>
+                                                                    <div className="country-name">
+                                                                        <span>Country:</span>
+                                                                        <span>{e.Country}</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div className="country-name">
+                                                                        <span>Sales:</span>
+                                                                        <span>{e.Sales}</span>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div className="country-name">
+                                                                        <span>Bounce:</span>
+                                                                        <span>{e.Bounce}%</span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        )
+                                                    })
+                                                }
+
                                             </tbody>
                                         </Table>
                                     </div>
