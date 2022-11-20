@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../../Sidebar/Layout'
 import { GiEarthAmerica } from 'react-icons/gi'
 import { Button, Col, Row, Table } from 'react-bootstrap'
@@ -6,13 +6,17 @@ import { MdWeekend, MdRefresh, MdModeEdit } from 'react-icons/md'
 import { RiBarChartFill } from 'react-icons/ri'
 import { SiHomeassistantcommunitystore } from 'react-icons/si'
 import { FaUserAlt, FaLocationArrow } from 'react-icons/fa'
- 
+import data from '../../Data/country_data.json'
+
 import Barchart from '../../charts/Barchart'
 import Linechart from '../../charts/Linechart'
 import LinechartS from '../../charts/LinechartS'
 
 
 const Analytics = (props) => {
+
+    const [countryData, setCountryData] = useState(data);
+
     return (
         <Layout header={true} footer={true} sidebar={true} breadcrumb="Analytics">
 
@@ -28,39 +32,44 @@ const Analytics = (props) => {
                         <Col lg={6} md={12}>
                             <div className="salse-table mt-3">
                                 <Table responsive>
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                <img src={require('../../assets/img/usa.png').default} alt="" width={25} />
-                                            </th>
-                                            <th>
-                                                <div className="country-name">
-                                                    <span>Country:</span>
-                                                    <span>United State</span>
-                                                </div>
-                                            </th>
-                                            <th>
-                                                <div className="country-name">
-                                                    <span>Sales:</span>
-                                                    <span>2500</span>
-                                                </div>
-                                            </th>
-                                            <th>
-                                                <div className="country-name">
-                                                    <span>Value:</span>
-                                                    <span>$230,900</span>
-                                                </div>
-                                            </th>
-                                            <th>
-                                                <div className="country-name">
-                                                    <span>Bounce:</span>
-                                                    <span>29.9%</span>
-                                                </div>
-                                            </th>
-                                        </tr>
-                                    </thead>
                                     <tbody>
-                                        <tr>
+                                        {
+                                            countryData.slice(1,5).map((e,i) => {
+                                                return (
+                                                    <tr key={i}>
+                                                        <td>
+                                                            <img src={e.img} alt="" width={25} />
+                                                        </td>
+                                                        <td>
+                                                            <div className="country-name">
+                                                                <span>Country:</span>
+                                                                <span>{e.Country}</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div className="country-name">
+                                                                <span>Sales:</span>
+                                                                <span>{e.Sales}</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div className="country-name">
+                                                                <span>Value:</span>
+                                                                <span>${e.Value}</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div className="country-name">
+                                                                <span>Bounce:</span>
+                                                                <span>{e.Bounce}%</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                )
+                                            })
+                                        }
+
+                                        {/* <tr>
                                             <td>
                                                 <img src={require('../../assets/img/germany.png').default} alt="" width={25} />
                                             </td>
@@ -146,7 +155,7 @@ const Analytics = (props) => {
                                                     <span>32.14%</span>
                                                 </div>
                                             </td>
-                                        </tr>
+                                        </tr> */}
                                     </tbody>
                                 </Table>
                             </div>
@@ -268,8 +277,8 @@ const Analytics = (props) => {
                         <div className="location-box mt-xs-0">
                             <img className="location1" src={require('../../assets/img/location1.jpg').default} alt="location" />
                             <div className="edit-refresh">
-                                <Button className="refresh-btn text-pink"><MdRefresh/></Button>
-                                <Button className="refresh-btn text-blue"><MdModeEdit/></Button>
+                                <Button className="refresh-btn text-pink"><MdRefresh /></Button>
+                                <Button className="refresh-btn text-blue"><MdModeEdit /></Button>
                             </div>
                             <div className="location-def text-center mt-3">
                                 <h4>Cozy 5 Stars Apartment</h4>
@@ -277,7 +286,7 @@ const Analytics = (props) => {
                             </div>
                             <div className="location d-flex align-items-center justify-content-between mt-3">
                                 <h5 className="mb-0">$899/night</h5>
-                                <span><FaLocationArrow/> Barcelona, Spain</span>
+                                <span><FaLocationArrow /> Barcelona, Spain</span>
                             </div>
                         </div>
                     </Col>
@@ -285,8 +294,8 @@ const Analytics = (props) => {
                         <div className="location-box margin-sm">
                             <img className="location1" src={require('../../assets/img/location2.jpg').default} alt="location" />
                             <div className="edit-refresh">
-                                <Button className="refresh-btn text-pink"><MdRefresh/></Button>
-                                <Button className="refresh-btn text-blue"><MdModeEdit/></Button>
+                                <Button className="refresh-btn text-pink"><MdRefresh /></Button>
+                                <Button className="refresh-btn text-blue"><MdModeEdit /></Button>
                             </div>
                             <div className="location-def text-center mt-3">
                                 <h4>Office Studio</h4>
@@ -294,7 +303,7 @@ const Analytics = (props) => {
                             </div>
                             <div className="location d-flex align-items-center justify-content-between mt-3">
                                 <h5 className="mb-0">$1.119/night</h5>
-                                <span><FaLocationArrow/> London, UK</span>
+                                <span><FaLocationArrow /> London, UK</span>
                             </div>
                         </div>
                     </Col>
@@ -302,8 +311,8 @@ const Analytics = (props) => {
                         <div className="location-box margin-md">
                             <img className="location1" src={require('../../assets/img/location3.jpg').default} alt="location" />
                             <div className="edit-refresh">
-                                <Button className="refresh-btn text-pink"><MdRefresh/></Button>
-                                <Button className="refresh-btn text-blue"><MdModeEdit/></Button>
+                                <Button className="refresh-btn text-pink"><MdRefresh /></Button>
+                                <Button className="refresh-btn text-blue"><MdModeEdit /></Button>
                             </div>
                             <div className="location-def text-center mt-3">
                                 <h4>Beautiful Castle</h4>
@@ -311,7 +320,7 @@ const Analytics = (props) => {
                             </div>
                             <div className="location d-flex align-items-center justify-content-between mt-3">
                                 <h5 className="mb-0">$459/night</h5>
-                                <span><FaLocationArrow/> Milan, Italy</span>
+                                <span><FaLocationArrow /> Milan, Italy</span>
                             </div>
                         </div>
                     </Col>

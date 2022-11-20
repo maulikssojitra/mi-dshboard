@@ -22,6 +22,7 @@ ChartJS.register(
 
 
 export const options = {
+    aspectRatio: 3,
     indexAxis: 'y',
     responsive: true,
     scales: {
