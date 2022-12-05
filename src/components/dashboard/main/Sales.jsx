@@ -17,7 +17,7 @@ const Sales = (props) => {
     const [countryData, setCountryData] = useState(country_data)
 
     return (
-        <Layout header={true} footer={true} breadcrumb="Sales">
+        <Layout header={true} breadcrumb="Sales">
 
             <div className="seles">
 
