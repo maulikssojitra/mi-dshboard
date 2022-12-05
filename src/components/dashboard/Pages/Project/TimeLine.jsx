@@ -8,7 +8,7 @@ const TimeLine = () => {
     const [data, setData] = useState(timelineData);
 
     return (
-        <Layout header={true} footer={true} breadcrumb="Timeline">
+        <Layout header={true} breadcrumb="Timeline">
 
             <div className="timeline">
                 <div className="timeline-box">

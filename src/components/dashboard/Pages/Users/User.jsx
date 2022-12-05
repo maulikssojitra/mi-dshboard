@@ -20,7 +20,7 @@ const User = () => {
     }
 
     return (
-        <Layout header={true} footer={true} breadcrumb="User">
+        <Layout header={true} breadcrumb="User">
             <div className="user-main">
                 <div className="user-form">
                     <div className="progress-bar">

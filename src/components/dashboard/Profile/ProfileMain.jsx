@@ -11,7 +11,7 @@ const ProfileMain = () => {
     const [profileBtn, setProfileBtn] = useState(1);
 
     return (
-        <Layout header={true} footer={true} breadcrumb="Profile Overview">
+        <Layout header={true} breadcrumb="Profile Overview">
 
             <div className="profile-main">
                 <div className="profile-cover"></div>

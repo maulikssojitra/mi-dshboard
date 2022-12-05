@@ -58,12 +58,12 @@ const Sidebar = (props) => {
                                     <span className="mar-left-10">My Profile</span>
                                 </div>
                             </Link>
-                            <Button className="sidebar-btn mt-1" onClick={refreshPage}>
+                            <Link to="/setting" className="sidebar-btn mt-1" onClick={refreshPage}>
                                 <div className="d-flex align-items-center">
                                     <span className="text-logo">S</span>
                                     <span className="mar-left-15">Settings</span>
                                 </div>
-                            </Button>
+                            </Link>
                             <Button className="sidebar-btn mt-1" onClick={refreshPage}>
                                 <div className="d-flex align-items-center">
                                     <span className="text-logo">L</span>
