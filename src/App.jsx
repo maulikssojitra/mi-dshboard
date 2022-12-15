@@ -15,6 +15,7 @@ import User from './components/dashboard/Pages/Users/User';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/assets/css/Main.css'
 import 'react-toastify/dist/ReactToastify.css';
+
 import Setting from './components/dashboard/Pages/setting/Setting';
 import Sidebar from './components/Sidebar/Sidebar';
 import Login from './components/auth/Login';
