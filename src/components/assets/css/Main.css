@@ -52,7 +52,12 @@
     font-display: swap;
 }
 
-/* ==================================================================================================================== */
+/* ================================================================================================================= */
+
+.box{
+    background-color: rgb(31, 40, 62);
+    box-shadow: rgb(0 0 0 / 14%) 0rem 0.125rem 0.125rem 0rem, rgb(0 0 0 / 20%) 0rem 0.1875rem 0.0625rem -0.125rem, rgb(0 0 0 / 12%) 0rem 0.0625rem 0.3125rem 0rem;
+}
 
 .loder {
     width: 100%;
@@ -164,6 +169,92 @@
 .input-toggle input:checked+.switch {
     background-color: #CCD2D7;
     transition: all 200ms ease-in-out;
+}
+
+.input_wrap {
+    position: relative;
+}
+
+.header-search,
+.header-select {
+    padding-top: 12px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ffffff65;
+    background: transparent;
+    outline: none;
+    color: #ffff;
+    position: relative;
+}
+
+.header-select{
+    padding-bottom: 7px;
+    font-size: 14px;
+}
+
+.header-select option{
+    background-color: #1a2035;
+}
+
+.header-search:focus,
+.header-select:focus {
+    border-bottom: 1px solid rgb(26, 115, 232);
+}
+
+.input_wrap label {
+    font-size: 14px;
+    color: #ffffff;
+    padding: 14px 0;
+    font-weight: 100;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+
+.header-search:focus+label {
+    font-size: 12px;
+    color: rgb(26, 115, 232);
+    top: -10px;
+    left: 00px;
+    background-color: #202940;
+    padding: 0px 5px 0px 0px;
+    backdrop-filter: blur(4px);
+    display: block;
+}
+
+.header-search:valid+label {
+    font-size: 12px;
+    color: rgb(26, 115, 232);
+    top: -10px;
+    left: 0px;
+    background-color: #202940;
+    padding: 0px 5px 0px 0px;
+    backdrop-filter: blur(4px);
+    display: block;
+}
+
+.header-select:focus+label {
+    font-size: 12px;
+    color: rgb(26, 115, 232);
+    top: -10px;
+    left: 00px;
+    background-color: #202940;
+    padding: 0px 5px 0px 0px;
+    backdrop-filter: blur(4px);
+    display: block;
+}
+
+.header-select:valid+label {
+    font-size: 12px;
+    color: rgb(26, 115, 232);
+    top: -10px;
+    left: 0px;
+    background-color: #202940;
+    padding: 0px 5px 0px 0px;
+    backdrop-filter: blur(4px);
+    display: block;
 }
 
 /* ==================================================================================================================== */
@@ -1058,93 +1149,6 @@ h1, h2, h3, h4, h5, h6 {
     color: rgba(255, 255, 255, 0.507);
 }
 
-.form-main .input_wrap {
-    position: relative;
-}
-
-.form-main .header-search,
-.form-main .header-select {
-    padding-top: 12px;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #ffffff65;
-    background: transparent;
-    outline: none;
-    color: #ffff;
-    position: relative;
-}
-
-.form-main .header-select{
-    padding-bottom: 7px;
-    font-size: 14px;
-}
-
-.form-main .header-select option{
-    background-color: #1a2035;
-}
-
-.form-main .header-search:focus,
-.form-main .header-select:focus {
-    border-bottom: 1px solid rgb(26, 115, 232);
-}
-
-.form-main .input_wrap label {
-    font-size: 14px;
-    color: #ffffff;
-    padding: 14px 0;
-    font-weight: 100;
-    position: absolute;
-    top: -5px;
-    left: 0;
-    transition: 0.2s ease all;
-    pointer-events: none;
-}
-
-.form-main .header-search:focus+label {
-    font-size: 12px;
-    color: rgb(26, 115, 232);
-    top: -10px;
-    left: 00px;
-    background-color: #202940;
-    padding: 0px 5px 0px 0px;
-    backdrop-filter: blur(4px);
-    display: block;
-}
-
-.form-main .header-search:valid+label {
-    font-size: 12px;
-    color: rgb(26, 115, 232);
-    top: -10px;
-    left: 0px;
-    background-color: #202940;
-    padding: 0px 5px 0px 0px;
-    backdrop-filter: blur(4px);
-    display: block;
-}
-
-.form-main .header-select:focus+label {
-    font-size: 12px;
-    color: rgb(26, 115, 232);
-    top: -10px;
-    left: 00px;
-    background-color: #202940;
-    padding: 0px 5px 0px 0px;
-    backdrop-filter: blur(4px);
-    display: block;
-}
-
-.form-main .header-select:valid+label {
-    font-size: 12px;
-    color: rgb(26, 115, 232);
-    top: -10px;
-    left: 0px;
-    background-color: #202940;
-    padding: 0px 5px 0px 0px;
-    backdrop-filter: blur(4px);
-    display: block;
-}
-
-
 /* =============================TimeLine============================ */
 .timeline{
     margin-top: 40px;
@@ -1344,4 +1348,79 @@ h1, h2, h3, h4, h5, h6 {
 
 .setting-main .btn-main button.active{
     background-color: #1a2035;
+}
+
+.setting-main .setting-left-box{
+    border-radius: 10px;
+    position: sticky;
+    top: 128px;
+}
+
+.setting-main .user-info-links{
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 15px;
+    border: none;
+    box-shadow: none !important;
+    margin-top: 8px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.setting-main .user-info-links svg{
+    font-size: 20px;
+}
+
+.setting-main .user-info-links span{
+    font-size: 15px;
+}
+
+.setting-main .user-info-links:hover{
+    background-color: rgba(255, 255, 255, 0.226);
+}
+
+.setting-main .user-info-links.active{
+    background-color: rgba(255, 255, 255, 0.226);
+}
+
+.setting-main .setting-right-box{
+    height: 2000px;
+}
+
+.setting-main .profile,
+.setting-main .basic-info{
+    border-radius: 10px;
+}
+
+.setting-main #profile{
+    scroll-padding-top: 220px;
+    scroll-margin-top: 220px;
+}
+
+.setting-main #basic_info{
+    scroll-padding-top: 145px;
+    scroll-margin-top: 145px;
+}
+
+.setting-main .profile-pic img{
+    border-radius: 50%;
+}
+
+.setting-main .profile-pic h5{
+    font-weight: 800;
+}
+
+.setting-main .profile-pic p{
+    font-weight: 100;
+    margin-top: 2px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.658);
+}
+
+.setting-main .switch-visible span{
+    font-size: 14px;
 }
