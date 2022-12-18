@@ -35,7 +35,7 @@ const Setting = () => {
                   <RiNewspaperFill />
                   <span>Basic Info</span>
                 </NavLink>
-                <NavLink className={`${btnActive === "change_password" ? "active" : ""} user-info-links`} onClick={() => setBtnActive("change_password")}>
+                <NavLink href='#change_password' className={`${btnActive === "change_password" ? "active" : ""} user-info-links`} onClick={() => setBtnActive("change_password")}>
                   <MdLock />
                   <span>change password</span>
                 </NavLink>
@@ -63,6 +63,7 @@ const Setting = () => {
             </Col>
             <Col lg={9} md={9}>
               <div className='setting-right-box'>
+
                 <div className='profile box py-3 px-4'>
                   <span id='profile'></span>
                   <div className=' d-flex align-items-center justify-content-between'>
@@ -82,6 +83,7 @@ const Setting = () => {
                     </div>
                   </div>
                 </div>
+
                 <div className='basic-info box p-4 mt-4'>
                   <span id='basic_info'></span>
                   <div className='basic-info-heading'>
@@ -204,35 +206,35 @@ const Setting = () => {
                         </div>
                       </Col>
                     </Row>
-                    <Row className='mt-1'>
+                    <Row>
                       <Col lg={6} md={6}>
                         <div className='input_field mt-4'>
-                          <input className="input-search" type="email" required="required" />
+                          <input className="input-search" type="text" required="required" />
                           <label>Email</label>
                         </div>
                       </Col>
                       <Col lg={6} md={6}>
                         <div className='input_field mt-4'>
-                          <input className="input-search" type="email" required="required" />
-                          <label>Confirm Email</label>
+                          <input className="input-search" type="text" required="required" />
+                          <label>confirmation email</label>
                         </div>
                       </Col>
                     </Row>
-                    <Row className='mt-1'>
+                    <Row>
                       <Col lg={6} md={6}>
                         <div className='input_field mt-4'>
                           <input className="input-search" type="text" required="required" />
-                          <label>Your Location</label>
+                          <label>your location</label>
                         </div>
                       </Col>
                       <Col lg={6} md={6}>
                         <div className='input_field mt-4'>
-                          <input className="input-search" type="email" required="required" />
+                          <input className="input-search" type="text" required="required" />
                           <label>Phone Number</label>
                         </div>
                       </Col>
                     </Row>
-                    <Row className='mt-1'>
+                    <Row>
                       <Col lg={6} md={6}>
                         <div className='input_field mt-4'>
                           <input className="input-search" type="text" required="required" />
@@ -241,13 +243,49 @@ const Setting = () => {
                       </Col>
                       <Col lg={6} md={6}>
                         <div className='input_field mt-4'>
-                          <input className="input-search" type="email" required="required" />
-                          <label>Skill</label>
+                          <input className="input-search" type="text" required="required" />
+                          <label>Skills</label>
                         </div>
                       </Col>
                     </Row>
                   </div>
                 </div>
+
+                <div className='change-password box p-4 mt-4 position-relative'>
+                  <span id='change_password'></span>
+                  <div className='basic-info-heading'>
+                    <h5>Change Password</h5>
+                  </div>
+                  <div className='change_pass_form '>
+                    <div className='input_field mt-4'>
+                      <input className="input-search" type="text" required="required" />
+                      <label>Current Password</label>
+                    </div>
+                    <div className='input_field mt-4'>
+                      <input className="input-search" type="text" required="required" />
+                      <label>New Password</label>
+                    </div>
+                    <div className='input_field mt-4'>
+                      <input className="input-search" type="text" required="required" />
+                      <label>Confirm New Password</label>
+                    </div>
+                  </div>
+                  <div className='new-pass-requirement mt-5'>
+                    <h5>Password requirements</h5>
+                    <p className='mt-2'>Please follow this guide for a strong password</p>
+                    <div className='pass-requirement-list'>
+                        <ul className='ps-3 m-0'>
+                          <li>One special characters</li>
+                          <li>Min 6 characters</li>
+                          <li>One number (2 are recommended)</li>
+                          <li>Change it often</li>
+                        </ul>
+                    </div>
+                  </div>
+                  <Button className='dark-box update-btn'>Update Password</Button>
+                </div>
+
+                
               </div>
             </Col>
           </Row>
