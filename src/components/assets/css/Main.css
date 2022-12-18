@@ -59,6 +59,11 @@
     box-shadow: rgb(0 0 0 / 14%) 0rem 0.125rem 0.125rem 0rem, rgb(0 0 0 / 20%) 0rem 0.1875rem 0.0625rem -0.125rem, rgb(0 0 0 / 12%) 0rem 0.0625rem 0.3125rem 0rem;
 }
 
+.dark-box{
+    background-color: #1a2035 !important;
+    box-shadow: rgb(0 0 0 / 14%) 0rem 0.125rem 0.125rem 0rem, rgb(0 0 0 / 20%) 0rem 0.1875rem 0.0625rem -0.125rem, rgb(0 0 0 / 12%) 0rem 0.0625rem 0.3125rem 0rem !important;
+}
+
 .loder {
     width: 100%;
     height: 100vh;
@@ -1392,7 +1397,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .setting-main .profile,
-.setting-main .basic-info{
+.setting-main .basic-info,
+.change-password{
     border-radius: 10px;
 }
 
@@ -1401,9 +1407,10 @@ h1, h2, h3, h4, h5, h6 {
     scroll-margin-top: 220px;
 }
 
-.setting-main #basic_info{
-    scroll-padding-top: 145px;
-    scroll-margin-top: 145px;
+.setting-main #basic_info,
+.setting-main #change_password{
+    scroll-padding-top: 150px;
+    scroll-margin-top: 150px;
 }
 
 .setting-main .profile-pic img{
@@ -1423,4 +1430,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .setting-main .switch-visible span{
     font-size: 14px;
+}
+
+.setting-main .new-pass-requirement p{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.616);
+    font-weight: 100;
+}
+
+.setting-main .new-pass-requirement .pass-requirement-list ul{
+    color: rgba(255, 255, 255, 0.616);
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.setting-main .change-password .update-btn{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 0;
+    font-size: 14px;
+    padding: 10px 20px;
 }
