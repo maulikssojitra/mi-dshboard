@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { useState } from 'react'
 import { Button, Col, NavLink, Row } from 'react-bootstrap'
 import { FaUserAlt } from 'react-icons/fa'
@@ -68,7 +68,7 @@ const Setting = () => {
                   <span id='profile'></span>
                   <div className=' d-flex align-items-center justify-content-between'>
                     <div className='profile-pic d-flex align-items-center gap-3'>
-                      <img src='./images/user-profile.jpg' width="80px" />
+                      <img src='./images/user-profile.jpg' width="80px" alt='' />
                       <div className='user-name'>
                         <h5>Alex Thompson</h5>
                         <p className='mb-0'>CEO / Co-Founder</p>

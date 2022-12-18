@@ -14,7 +14,6 @@ const Sales = (props) => {
     const [subDateModal, setSubDateModal] = useState();
     const [costomer, setCostomer] = useState();
     const [revenu, setRevenu] = useState();
-    const [countryData, setCountryData] = useState(country_data)
 
     return (
         <Layout header={true} breadcrumb="Sales">

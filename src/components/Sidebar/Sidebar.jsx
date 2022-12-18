@@ -3,7 +3,7 @@ import { Button, Collapse } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { FaAngleDown } from 'react-icons/fa'
 import { BsExclude } from 'react-icons/bs'
-import { HiPhotograph, HiShoppingBag, HiClipboard } from 'react-icons/hi'
+import { HiPhotograph, HiShoppingBag } from 'react-icons/hi'
 import { MdSettingsApplications } from 'react-icons/md'
 
 
@@ -22,10 +22,6 @@ const Sidebar = (props) => {
     const [ecommerce, setEcommerce] = useState();
     const [ecommerceProducts, setEcommerceProducts] = useState();
     const [ecommerceOrders, setEcommerceOrders] = useState();
-    const [authentication, setAuthentication] = useState();
-    const [signin, setSignin] = useState();
-    const [signup, setSignup] = useState();
-    const [resetPass, setResetPass] = useState();
     const [application, setApplication] = useState();
 
     const refreshPage = () => {
@@ -294,80 +290,6 @@ const Sidebar = (props) => {
                                             <div className="d-flex align-items-center">
                                                 <span className="text-logo">O</span>
                                                 <span className="mar-left-10">Order Details</span>
-                                            </div>
-                                        </Button>
-                                    </div>
-                                </Collapse>
-                            </div>
-                        </Collapse>
-                        <Button className={`${authentication ? "active" : ""} sidebar-btn`} onClick={() => { setAuthentication(!authentication) }} aria-controls="collapse-pages" aria-expanded={authentication}>
-                            <div className="dashboard-btn d-flex align-items-center gap-10">
-                                <HiClipboard />
-                                <span>Authentication</span>
-                            </div>
-                            <FaAngleDown className={`${!authentication ? "rotat-down" : "rotat-up "}`} />
-                        </Button>
-                        <Collapse in={authentication}>
-                            <div id="collapse-pages">
-                                <Button className={`${signin ? "active" : ""} sidebar-btn`} onClick={() => { setSignin(!signin) }} aria-controls="collapse-pages" aria-expanded={signin}>
-                                    <div className="dashboard-btn d-flex align-items-center gap-10">
-                                        <span className="text-logo">S</span>
-                                        <span>Sign In</span>
-                                    </div>
-                                    <FaAngleDown className={`${!signin ? "rotat-down" : "rotat-up "}`} />
-                                </Button>
-                                <Collapse in={signin}>
-                                    <div id="collapse-pages">
-                                        <Button className="sidebar-btn mt-1" onClick={refreshPage}>
-                                            <div className="d-flex align-items-center">
-                                                <span className="text-logo">B</span>
-                                                <span className="mar-left-10">Basic</span>
-                                            </div>
-                                        </Button>
-                                        <Button className="sidebar-btn mt-1" onClick={refreshPage}>
-                                            <div className="d-flex align-items-center">
-                                                <span className="text-logo">C</span>
-                                                <span className="mar-left-10">Cover</span>
-                                            </div>
-                                        </Button>
-                                        <Button className="sidebar-btn mt-1" onClick={refreshPage}>
-                                            <div className="d-flex align-items-center">
-                                                <span className="text-logo">I</span>
-                                                <span className="mar-left-10">Illustration</span>
-                                            </div>
-                                        </Button>
-                                    </div>
-                                </Collapse>
-                                <Button className={`${signup ? "active" : ""} sidebar-btn`} onClick={() => { setSignup(!signup) }} aria-controls="collapse-pages" aria-expanded={signup}>
-                                    <div className="dashboard-btn d-flex align-items-center gap-10">
-                                        <span className="text-logo">S</span>
-                                        <span>Sign Up</span>
-                                    </div>
-                                    <FaAngleDown className={`${!signup ? "rotat-down" : "rotat-up "}`} />
-                                </Button>
-                                <Collapse in={signup}>
-                                    <div id="collapse-pages">
-                                        <Button className="sidebar-btn mt-1" onClick={refreshPage}>
-                                            <div className="d-flex align-items-center">
-                                                <span className="text-logo">C</span>
-                                                <span className="mar-left-10">Cover</span>
-                                            </div>
-                                        </Button>
-                                    </div>
-                                </Collapse>
-                                <Button className={`${resetPass ? "active" : ""} sidebar-btn`} onClick={() => { setResetPass(!resetPass) }} aria-controls="collapse-pages" aria-expanded={resetPass}>
-                                    <div className="dashboard-btn d-flex align-items-center gap-10">
-                                        <span className="text-logo">R</span>
-                                        <span>Reset Password</span>
-                                    </div>
-                                    <FaAngleDown className={`${!resetPass ? "rotat-down" : "rotat-up "}`} />
-                                </Button>
-                                <Collapse in={resetPass}>
-                                    <div id="collapse-pages">
-                                        <Button className="sidebar-btn mt-1" onClick={refreshPage}>
-                                            <div className="d-flex align-items-center">
-                                                <span className="text-logo">C</span>
-                                                <span className="mar-left-10">Cover</span>
                                             </div>
                                         </Button>
                                     </div>

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import React, { Fragment } from 'react'
 import {
     Outlet,
@@ -23,12 +22,11 @@ import Login from './components/auth/Login';
 
 const App = () => {
 
-    const [isToggle, setIsToggle] = useState();
 
     const RouteWithSidebar = () => {
         return (
             <>
-                <Sidebar isToggle={isToggle} />
+                <Sidebar  />
                 <Outlet />
             </>
         )
